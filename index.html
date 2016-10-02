@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sticky Desk</title>
+	<style>
+		.note {
+			background: hsl(60, 100%, 80%);
+			border: 0;
+			font-family: inconsolata;
+			font-size: 1em;
+			height: 10em;
+			line-height: 1.2;
+			padding: 0.5em;
+			width: 30em;
+		}
+	</style>
+</head>
+<body>
+	<textarea class="note"></textarea>
+
+	<script>
+
+if (localStorage.getItem('note')) {
+	document.querySelector('.note').value = localStorage.getItem('note')
+}
+
+document.querySelector('.note').addEventListener('blur', event =>
+	localStorage.setItem('note', event.currentTarget.value))
+
+	</script>
+</body>
+</html>
