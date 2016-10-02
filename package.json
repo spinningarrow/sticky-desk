@@ -1,0 +1,23 @@
+{
+  "name": "sticky-desk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "electron": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spinningarrow/sticky-desk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spinningarrow/sticky-desk/issues"
+  },
+  "homepage": "https://github.com/spinningarrow/sticky-desk#readme",
+  "dependencies": {
+    "electron": "^1.4.2"
+  }
+}
