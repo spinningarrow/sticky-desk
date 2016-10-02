@@ -7,9 +7,11 @@ let win
 function createWindow () {
   // Create the browser window.
   win = new BrowserWindow({width: 800, height: 600})
+  win2 = new BrowserWindow({width: 800, height: 600})
 
   // and load the index.html of the app.
   win.loadURL(`file://${__dirname}/index.html`)
+  win2.loadURL(`file://${__dirname}/index.html`)
 
   // Open the DevTools.
   win.webContents.openDevTools()
@@ -20,6 +22,13 @@ function createWindow () {
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     win = null
+  })
+
+  win2.on('closed', () => {
+    // Dereference the window object, usually you would store windows
+    // in an array if your app supports multi windows, this is the time
+    // when you should delete the corresponding element.
+    win2 = null
   })
 }
 
